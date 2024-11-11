@@ -1,0 +1,20 @@
+{
+  "name": "bookscafe",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start:all": "concurrently \"npm run start:server\" \"npm run client\"",
+    "start:client": "cd client && npm start",
+    "start:server": "concurrently \"npm run start:admin\" \"npm run start:api\"",
+    "start:admin": "cd server/admin && npm start",
+    "start:api": "cd server/api && npm start",
+    "dev:api": "cd server/api && npm run nodemon"
+  },
+  "dependencies": {
+   "concurrently": "^7.0.0"
+  },
+  "keywords": [],
+  "author": "OmarSanchez",
+  "license": "ISC",
+  "description": ""
+}
